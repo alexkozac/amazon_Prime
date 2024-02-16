@@ -439,7 +439,6 @@ section h2 {
 
 
 .team {
-    
   padding: 30px 0;
   display: flex;
   flex-wrap: wrap;
@@ -450,6 +449,7 @@ section h2 {
 
 .team-member {
   text-align: center;
+  position: relative; /* Add this to make the number positioning relative to its parent */
   width: 300px; 
   height: 400px; 
   padding: 20px;
@@ -465,10 +465,22 @@ section h2 {
   height: 100%;
   object-fit: cover;
   margin-bottom: 10px;
-  
 }
 
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20rem;
+  color: var(--red); 
+}
 
+.dd{
+  margin-left: 3rem;
+  color: var(--red);
+  font-size: 7rem;
+}
 
 .tx {
   padding: 20px;
@@ -508,7 +520,40 @@ section h2 {
   }
 
 
-
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 
 
