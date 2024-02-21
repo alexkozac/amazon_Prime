@@ -556,7 +556,68 @@ section h2 {
   }
 
 
+  .container-12 {
+    text-align: center;
+}
 
+.directors {
+    margin-bottom: 20rem;
+    margin-top: 20rem;
+}
+
+.directors img {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 10px;
+}
+
+.graphics {
+    display: inline-block;
+}
+
+.graphic-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.graphic-row img {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 10px;
+}
+
+.storyteller img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.graphic-row-2{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.graphic-row-2 img {
+  width: 20rem;
+  height: 20rem;
+  margin: 0 10px;
+}
+
+.gr{
+  margin-top: 20rem;
+}
+
+.testo{
+  font-size: 5rem;
+  width: 70%;
+  
+}
+
+.testo p{
+  margin-left: 4rem;
+}
 
 
 
