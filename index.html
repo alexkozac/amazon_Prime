@@ -1,189 +1,670 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Streaming Service</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-    <header>
-      <div class="box_header">
-        <div class="logo">
-          <a href="index.html">
-            <img src="img/logo.jpg" alt="logo" />
-          </a>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- style2 -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <!-- Menu -->
+    <ul class="list">
+        <li><a href="#home" class="voice logovoice homelink active"><img src="/img/logo.png" alt="logo" class="logo"></a></li>
+        <li><a href="#diary" class="voice">Diario di bordo</a></li>
+        <li><a href="#meta" class="voice">Meta24</a></li>
+        <li><a href="#backstage" class="voice">Backstage</a></li>
+        <li><a href="#team" class="voice">Team</a></li>
+        <li><a href="#identity" class="voice">Identity</a></li>
+    </ul>
+
+    <!-- Sezioni -->
+    <div id="home" class="home main active section home-section">
+        <h1>LA NOSTRA SERIE</h1>
+        <p class="homedescription">Una serie fuori dagli schemi, dove pinocchio e Batman si incontreranno in un metaverso che fa invidia al mondo Marvel. Dal 1920 al 2020 i personaggi dei principali film spiegheranno il grande caos dietro la creazione delle Gift per prime video.</p>
+        <div class="button">
+            <a href="/video/google.mp4" class="button"><i class="fa-solid fa-play"></i>Riproduci</a>
         </div>
 
-        <div class="nav_buttons">
-          <div><a href="diario_bordo.html">Diario di Bordo</a></div>
+        <!-- slider -->
+        <div class="slider">
+            <!-- card 1 -->
+            <div class="card-episode">
+                <div class="image">
+                    <img src="/img/overlay.png" alt="anteprima" class="preview">
+                    <span class="fa-solid fa-play start"></span>
+                </div>
+                <h3 class="episode-title">Episodio 1</h3>
+                <p class="epdescription">Holly Golightly si è smatrrita ed è arrivata alla mohole qua ha trovato una vetrina un po’ particolare, le pietre preziose hanno i nomi dei film, chissà cosa vorrà dire.</p>
+                <div class="video">
+                    <div class="video-body">
+                        <h3 class="video-title">Lorem, ipsum dolor.</h3>
+                        <p class="video-description">Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- popup 1 -->
+            <div class="video-popup">
+                <div class="video-popup-inner">
+                    <div class="video-popup-content">
+                        <span class="video-popup-close"><i class="fa fa-xmark"></i></span>
+                        <div class="button">
+                            <a href="/video/google.mp4" target="_blank" class="button"><i class="fa-solid fa-play"></i>Riproduci</a>
+                        </div>
+                        <div class="video-popup-info">
+                            <div class="video-popup-body">
+                                <h3 class="details-title">Episodio 1</h3>
+                                <p class="details-description">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- popup -->
+            <!-- card -->
+            
+            <!-- --- -->
+
+            <!-- card 2 -->
+            <div class="card-episode">
+                <div class="image">
+                    <img src="/img/overlay.png" alt="anteprima" class="preview">
+                    <span class="fa-solid fa-play start"></span>
+                </div>
+                <h3 class="episode-title">Episodio 2</h3>
+                <p class="epdescription">l’incredibile, l’impensabile, l’assurda, telegratuita del gatto e la volpe. Da esperti ladri si trasformano in televenditori irresistibili.</p>
+                <div class="video">
+                    <div class="video-body">
+                        <h3 class="video-title">Lorem, ipsum dolor.</h3>
+                        <p class="video-description">Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- popup 2 -->
+            <div class="video-popup">
+                <div class="video-popup-inner">
+                    <div class="video-popup-content">
+                        <span class="video-popup-close"><i class="fa fa-xmark"></i></span>
+                        <div class="button">
+                            <a href="/video/google.mp4" class="button"><i class="fa-solid fa-play"></i>Riproduci</a>
+                        </div>
+                        <div class="video-popup-info">
+                            <div class="video-popup-body">
+                                <h3 class="details-title">Episodio 2</h3>
+                                <p class="details-description">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- popup -->
+            <!-- card -->
+
+            <!-- --- -->
+
+            <!-- card 3 -->
+            <div class="card-episode">
+                <div class="image">
+                    <img src="/img/overlay.png" alt="anteprima" class="preview">
+                    <span class="fa-solid fa-play start"></span>
+                </div>
+                <h3 class="episode-title">Episodio 3</h3>
+                <p class="epdescription">Sconfiggere l’astinenza per Dottor Jekyll e Mr. Hyde è un gioco da ragazzi: un telecomando, un pulsante play e via con il trip.</p>
+                <div class="video">
+                    <div class="video-body">
+                        <h3 class="video-title">Lorem, ipsum dolor.</h3>
+                        <p class="video-description">Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- popup 3 -->
+            <div class="video-popup">
+                <div class="video-popup-inner">
+                    <div class="video-popup-content">
+                        <span class="video-popup-close"><i class="fa fa-xmark"></i></span>
+                        <div class="button">
+                            <a href="/video/google.mp4" class="button"><i class="fa-solid fa-play"></i>Riproduci</a>
+                        </div>
+                        <div class="video-popup-info">
+                            <div class="video-popup-body">
+                                <h3 class="details-title">Episodio 3</h3>
+                                <p class="details-description">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- popup -->
+            <!-- card -->
+
+            <!-- --- -->
+
+            <!-- card 4 -->
+            <div class="card-episode">
+                <div class="image">
+                    <img src="/img/overlay.png" alt="anteprima" class="preview">
+                    <span class="fa-solid fa-play start"></span>
+                </div>
+                <h3 class="episode-title">Episodio 4</h3>
+                <p class="epdescription">Quando i soldi si mettono in mezzo tra Jack e Alfred anche il più buono dei maggiordomi può perdere la pazienza. La lotta tra i due sarà ardua, chissà chi vincerà.</p>
+                <div class="video">
+                    <div class="video-body">
+                        <h3 class="video-title">Lorem, ipsum dolor.</h3>
+                        <p class="video-description">Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- popup 4 -->
+            <div class="video-popup">
+                <div class="video-popup-inner">
+                    <div class="video-popup-content">
+                        <span class="video-popup-close"><i class="fa fa-xmark"></i></span>
+                        <div class="button">
+                            <a href="/video/google.mp4" class="button"><i class="fa-solid fa-play"></i>Riproduci</a>
+                        </div>
+                        <div class="video-popup-info">
+                            <div class="video-popup-body">
+                                <h3 class="details-title">Episodio 4</h3>
+                                <p class="details-description">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- popup -->
+            <!-- card -->
+
+            <!-- --- -->
+
+            <!-- card -->
+            <div class="card-episode">
+                <div class="image">
+                    <img src="/img/overlay.png" alt="anteprima" class="preview">
+                    <span class="fa-solid fa-play start"></span>
+                </div>
+                <h3 class="episode-title">Episodio 5</h3>
+                <p class="epdescription">Harry e Piton hanno un compito insolito: Silente gli affida l’incarico di creare degli stupendi gadget per i futuri studenti e no solo!</p>
+                <div class="video">
+                    <div class="video-body">
+                        <h3 class="video-title">Lorem, ipsum dolor.</h3>
+                        <p class="video-description">Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- popup -->
+            <div class="video-popup">
+                <div class="video-popup-inner">
+                    <div class="video-popup-content">
+                        <div class="button">
+                            <a href="/video/google.mp4" class="button" target="_blank"><i class="fa-solid fa-play"></i>Riproduci</a>
+                        </div>
+                        <span class="video-popup-close"><i class="fa fa-xmark"></i></span>
+                        <div class="video-popup-info">
+                            <div class="video-popup-body">
+                                <h3 class="details-title">Episodio 5</h3>
+                                <p class="details-description">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- popup -->
+            <!-- card -->
+
+            <!-- --- -->
+
         </div>
-
-        <div class="nav_buttons">
-          <div><a href="#about">Meta24</a></div>
+        <!-- fine slider -->
+        <div class="footer">
+            <div class="socials">
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="privacy">
+                <span>Privacy Policy</span><span>Termini e Condizioni</span><span>Metaprogetto 2024@</span>
+            </div>
         </div>
+    </div>
 
-        <div class="nav_buttons">
-          <div><a href="#about">BackStage</a></div>
+    <div id="diary" class="section diary">
+        <div class="dd">
+            <h2>Diario di Bordo</h2>
+          </div>
+            <div class="about" id="about">
+                <div class="about">
+                  <img src="img/26.jpg" alt="logo" />
+              
+                  <div class="text_ab">
+                    <h2>
+                      Welcome to Transfer low Cost Milano, where we redefine the way you
+                      experience affordable and reliable transfers!
+                    </h2>
+                    <p>
+                      As a premier low-cost car transfer service, we take pride in
+                      offering a seamless journey that doesn't break the bank.
+                      <br />
+                      <br />
+                      We understand the importance of cost-effective transportation
+                      without compromising on quality and comfort. Our fleet of
+                      well-maintained vehicles and professional drivers are dedicated to
+                      providing you with a stress-free and economical transfer
+                      experience.
+                    </p>
+                    <button>Riproduci</button>
+                  </div>
+              
+    
+                </div>
+              </div>
+    
+    
+              
+    
+    
+    
+    
+    
+          <section class="user-recommendations">
+            <div class="recommendation-list" id="recommendationCarousel">
+              <!-- Duplicate items for infinite scrolling -->
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+    
+              <div class="movie-item">
+                <img src="img/1.jpg" alt="1" />
+                <div class="overlay">
+                  <p class="overlay-text">Recommendation Title</p>
+                  <button class="overlay-button">Watch Now</button>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+    
+    
+          <section class="team">
+            <div class="team-member" id="team-member-1">
+              <img src="img/biglietto.svg" alt="logo" />
+              <span class="number">1</span>
+            </div>
+    
+            <div class="team-member" id="team-member-1">
+              <img src="img/biglietto.svg" alt="logo" />
+              <span class="number">2</span>
+            </div>
+    
+            <div class="team-member" id="team-member-1">
+              <img src="img/biglietto.svg" alt="logo" />
+              <span class="number">3</span>
+            </div>
+    
+            <div class="team-member" id="team-member-1">
+              <img src="img/biglietto.svg" alt="logo" />
+              <span class="number">4</span>
+            </div>
+    
+            <div class="team-member" id="team-member-1">
+              <img src="img/biglietto.svg" alt="logo" />
+              <span class="number">5</span>
+            </div>
+    
+            <div class="team-member" id="team-member-1">
+              <img src="img/biglietto.svg" alt="logo" />
+              <span class="number">6</span>
+            </div>
+    
+            <div class="team-member" id="team-member-1">
+              <img src="img/biglietto.svg" alt="logo" />
+              <span class="number">7</span>
+            </div>
+    
+            <div class="team-member" id="team-member-1">
+              <img src="img/biglietto.svg" alt="logo" />
+              <span class="number">8</span>
+            </div>
+    
+            <div class="team-member" id="team-member-1">
+              <img src="img/biglietto.svg" alt="logo" />
+              <span class="number">9</span>
+            </div>
+    
+            <div class="team-member" id="team-member-1">
+              <img src="img/biglietto.svg" alt="logo" />
+              <span class="number">10</span>
+            </div>
+    
+    
+    
+    
+    
+     
+    
+    
+    
+    
+          </section>
+    
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p id="modal-text"></p>
+            </div>
+          </div>
+        <div class="footer">
+            <div class="socials">
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="privacy">
+                <span>Privacy Policy</span><span>Termini e Condizioni</span><span>Metaprogetto 2024@</span>
+            </div>
         </div>
+    </div>
 
-        <div class="nav_buttons">
-          <div><a href="team.html">Team</a></div>
+    <div id="meta" class="section meta">
+        <div class="container">
+            <div class="cover"></div>
+            <div     class="details">
+                <h3 class="title">Meta24 - Gift&More</h3>
+                <div class="rates">
+                    <span class="star fa-solid fa-star"></span><span class="star fa-solid fa-star"></span><span class="star fa-solid fa-star"></span><span class="star fa-solid fa-star"></span><span class="star fa-regular fa-star"></span>
+                </div>
+                <p class="description visible">Lorem ipsum dolor sit amet consectetur. Accumsan quam fermentum massa consequat in ullamcorper. Tincidunt eu ante lobortis mauris augue ut. Faucibus ultricies mauris sit viverra vitae in est sagittis. Lectus dictum sed.</p>
+                <p class="description not-visible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur totam sequi iste.</p>
+                <span class="read-more visible">Leggi di più</span>
+                <div class="button">
+                    <a href="/video/google.mp4" class="button"><i class="fa-solid fa-play"></i>Riproduci</a>
+                </div>
+                <div class="credits">
+                    <span class="regia">Regia: </span>
+                    <div class="cast">Cast: Persona, Altra persona</div>
+                </div>
+            </div>
         </div>
-
-        <div class="nav_buttons">
-          <div><a href="cupcakes.html">Identity</a></div>
+        <div class="footer">
+            <div class="socials">
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="privacy">
+                <span>Privacy Policy</span><span>Termini e Condizioni</span><span>Metaprogetto 2024@</span>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <div class="nav_buttons">
-        <div class="search">
-          <input type="text" id="searchInput" placeholder="#" />
-          <button onclick="searchContent()">Search</button>
-          <div id="searchResults" class="search-results"></div>
+    <div id="backstage" class="section backstage">
+        <div class="container">
+            <div class="cover"></div>
+            <div     class="details">
+                <h3 class="title">Backstage</h3>
+                <div class="rates">
+                    <span class="star fa-solid fa-star"></span><span class="star fa-solid fa-star"></span><span class="star fa-solid fa-star"></span><span class="star fa-solid fa-star"></span><span class="star fa-regular fa-star"></span>
+                </div>
+                <p class="description visible">Lorem ipsum dolor sit amet consectetur. Accumsan quam fermentum massa consequat in ullamcorper. Tincidunt eu ante lobortis mauris augue ut. Faucibus ultricies mauris sit viverra vitae in est sagittis. Lectus dictum sed.</p>
+                <p class="description not-visible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur totam sequi iste.</p>
+                <span class="read-more visible">Leggi di più</span>
+                <div class="button">
+                    <a href="/video/google.mp4" class="button"><i class="fa-solid fa-play"></i>Riproduci</a>
+                </div>
+                <div class="credits">
+                    <span class="regia">Regia: </span>
+                    <div class="cast">Cast: Persona, Altra persona</div>
+                </div>
+            </div>
         </div>
-      </div>
-    </header>
-
-    <section class="hero">
-      <div class="hero-container">
-        <div class="hero-content">
-          <h1 class="hero-title">Title Here</h1>
-          <div class="hero-description">
-            <p>A brief description of the content goes here.</p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. A nisi
-              eos
-              <br />
-              <br />
-              nesciunt quam modi ipsa quo illum debitis vel. Sint, quos.
-              Voluptatum hic quam eos voluptas omnis aut impedit error!
-
-              <br />
-              <br />
-              nesciunt quam modi ipsa quo illum debitis vel. Sint, quos.
-              Voluptatum hic quam eos voluptas omnis aut impedit error!
-            </p>
-          </div>
-          <button class="exp" onclick="navigateToAnotherPage()">
-            Riproduci
-          </button>
+        <div class="footer">
+            <div class="socials">
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://scuola.mohole.it"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="privacy">
+                <span>Privacy Policy</span><span>Termini e Condizioni</span><span>Metaprogetto 2024@</span>
+            </div>
         </div>
-        <video autoplay muted loop poster="poster-image.jpg">
-          <source
-            src="img/clideo_editor_31cfad691fec4752a6d5ba1868a58331 (online-video-cutter.com).mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </section>
+    </div>
 
-    <main class="container">
-      <section class="featured">
-        <div class="featured-carousel"></div>
-      </section>
-
-      <section class="popular-movies">
-        <div class="movie-list">
-          <div class="movie-item">
-            <img src="img/1.jpg" alt="1" />
-            <div class="overlay">
-              <h3>Title 1</h3>
-              <p>Description for movie 1.</p>
+    <div id="team" class="section team">
+        <section>
+            <div class="dd">
+                <h1>Teametaprogetto 2024</h1>
             </div>
-          </div>
-
-          <div class="movie-item">
-            <img src="img/1.jpg" alt="2" />
-            <div class="overlay">
-              <h3>Title 2</h3>
-              <p>Description for movie 2.</p>
+            <div class="testo">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam iste nesciunt ea veritatis rem voluptate, fuga harum ut aliquid illum corrupti tempora, id quisquam explicabo vero quo. Voluptas, quia similique!
+                Reiciendis hic iste officiis inventore impedit laboriosam cum atque repellat, consequatur facilis vero amet dolorum accusamus debitis. Consequatur, expedita quam eius nisi est nostrum deleniti hic repellendus ipsa ipsum at!
+                Praesentium cupiditate aperiam dolor aut saepe vitae voluptatum maxime delectus ratione repellendus, aliquam impedit neque maiores. Incidunt, velit nulla quisquam unde, consectetur excepturi quae maxime perferendis alias modi cupiditate tempore.
+                Est temporibus at totam ipsum perferendis atque deleniti accusamus, perspiciatis dolorem in animi natus facere error. Magni maiores nobis facere nostrum, id minus laborum aliquam dolores iusto sequi amet alias?
+                Facilis est itaque commodi non repellat ut, id autem animi dolores voluptatem exercitationem sed quos reprehenderit distinctio velit. Labore officiis rerum sequi quasi facere odio eligendi nihil facilis sit dolorem!</p>
             </div>
-          </div>
-
-          <div class="movie-item">
-            <img src="img/1.jpg" alt="2" />
-            <div class="overlay">
-              <h3>Title 2</h3>
-              <p>Description for movie 2.</p>
+        </section>
+        <main>
+            <div class="container-12">
+                <div class="directors">
+                    <img src="img/user.webp" alt="Director 1">
+                    <img src="img/user.webp" alt="Director 2">                  
+                    <img src="img/user.webp" alt="Director 3">
+                </div>
+                <div class="graphics">
+                    <div class="graphic-row">
+                        <img src="img/user.webp" alt="Graphic 1">
+                        <img src="img/user.webp" alt="Graphic 2">
+                        <img src="img/user.webp" alt="Storyteller">
+                        <img src="img/user.webp" alt="Storyteller">
+                    </div>
+                    <div class="graphic-row">
+                        <img src="img/user.webp" alt="Graphic 1">
+                        <img src="img/user.webp" alt="Graphic 2">
+                        <img src="img/user.webp" alt="Storyteller">
+                        <img src="img/user.webp" alt="Storyteller">
+                    </div>
+                    <div class="graphic-row">
+                        <img src="img/user.webp" alt="Graphic 1">
+                        <img src="img/user.webp" alt="Graphic 2">
+                        <img src="img/user.webp" alt="Storyteller">
+                        <img src="img/user.webp" alt="Storyteller">
+                    </div>
+                <div class="gr">
+                    <div class="graphic-row-2">
+                        <img src="img/user.webp" alt="Graphic 3">
+                        <img src="img/user.webp" alt="Graphic 4">
+                    </div>
+                    <div class="graphic-row-2">
+                        <img src="img/user.webp" alt="Graphic 5">
+                        <img src="img/user.webp" alt="Graphic 6">
+                    </div>
+                    <div class="graphic-row-2">
+                        <img src="img/user.webp" alt="Graphic 5">
+                        <img src="img/user.webp" alt="Graphic 6">
+                    </div>
+                    <div class="graphic-row-2">
+                        <img src="img/user.webp" alt="Graphic 7">
+                        <img src="img/user.webp" alt="Graphic 8">
+                    </div>
+                    <div class="graphic-row-2">
+                        <img src="img/user.webp" alt="Graphic 9">
+                    </div>
+                </div>
+                </div>
             </div>
-          </div>
+    </div>
 
-          <div class="movie-item">
-            <img src="img/1.jpg" alt="2" />
-            <div class="overlay">
-              <h3>Title 2</h3>
-              <p>Description for movie 2.</p>
-            </div>
-          </div>
+    <div id="identity" class="section identity">
+    </div>
 
-          <div class="movie-item">
-            <img src="img/1.jpg" alt="2" />
-            <div class="overlay">
-              <h3>Title 2</h3>
-              <p>Description for movie 2.</p>
-            </div>
-          </div>
+    <!-- js -->
+    <script src="../js/script.js"></script>
 
-          <div class="movie-item">
-            <img src="img/1.jpg" alt="2" />
-            <div class="overlay">
-              <h3>Title 2</h3>
-              <p>Description for movie 2.</p>
-            </div>
-          </div>
-
-          <div class="movie-item">
-            <img src="img/1.jpg" alt="2" />
-            <div class="overlay">
-              <h3>Title 2</h3>
-              <p>Description for movie 2.</p>
-            </div>
-          </div>
-
-          <div class="movie-item">
-            <img src="img/1.jpg" alt="2" />
-            <div class="overlay">
-              <h3>Title 2</h3>
-              <p>Description for movie 2.</p>
-            </div>
-          </div>
-
-          <div class="movie-item">
-            <img src="img/1.jpg" alt="2" />
-            <div class="overlay">
-              <h3>Title 2</h3>
-              <p>Description for movie 2.</p>
-            </div>
-          </div>
-
-          <div class="movie-item">
-            <img src="img/1.jpg" alt="2" />
-            <div class="overlay">
-              <h3>Title 2</h3>
-              <p>Description for movie 2.</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-nav">
-          <button class="prev-btn">Previous</button>
-          <button class="next-btn">Next</button>
-        </div>
-      </section>
-    </main>
-
-
-
-
-
-    <footer>
-      <div class="container">
-        <p>&copy; 2024 Streaming Service. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
