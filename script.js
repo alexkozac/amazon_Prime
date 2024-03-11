@@ -1,95 +1,121 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.addEventListener('click', function () {
-        changeCursor();
-    });
-});
+//home voce
+/* const logo = document.querySelector('.logo');
 
-function changeCursor() {
-    document.body.style.cursor = 'url("img/2.png"), auto';
-}
+logo.addEventListener("click", () => {
+    logo.innerHTML = "<img src=\"img/logoHover.png\" alt=\"logohover\" class=\"logo\">"
+}); */
 
+// popup
+document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("start")) {
+            toggleVideoPopup();
+            videoItemDetails(e.target.closest(".card-episode"));
+        }
 
-
-function navigateToAnotherPage() {
-    
-    window.location.href = "another-page.html";
-}
-
-function showDetails(title, description, rating) {
-    const detailsTitle = document.getElementById('detailsTitle');
-    const detailsImage = document.getElementById('detailsImage');
-    const detailsDescription = document.getElementById('detailsDescription');
-    const detailsRating = document.getElementById('detailsRating');
-
-    detailsTitle.textContent = title;
-    detailsImage.src = `images/${title.toLowerCase().replace(/\s+/g, '-')}-details.jpg`;
-    detailsImage.alt = `${title} Details`;
-    detailsDescription.textContent = description;
-    detailsRating.textContent = rating;
-    document.getElementById('movieDetails').style.display = 'block';
-}
-
-function searchContent() {
-    const searchInput = document.getElementById('searchInput').value.toLowerCase();
-    const searchResultsContainer = document.getElementById('searchResults');
-    searchResultsContainer.innerHTML = "";
-
-   
-    const searchResultsData = [
-        { title: "Movie 1", description: "Description for Movie 1", rating: 8 },
-        { title: "Movie 2", description: "Description for Movie 2", rating: 7.5 },
-        { title: "TV Show 1", description: "Description for TV Show 1", rating: 9 },
-        { title: "TV Show 2", description: "Description for TV Show 2", rating: 8.5 },
-    ];
-
-    const searchResults = searchResultsData.filter(item => item.title.toLowerCase().includes(searchInput));
-
-    searchResults.forEach(result => {
-        const resultItem = document.createElement('div');
-        resultItem.classList.add('media-item');
-        resultItem.innerHTML = `
-            <img src="images/${result.title.toLowerCase().replace(/\s+/g, '-')}-thumbnail.jpg" alt="${result.title}">
-            <h3 onclick="showDetails('${result.title}', '${result.description}', ${result.rating})">${result.title}</h3>
-        `;
-        searchResultsContainer.appendChild(resultItem);
-    });
-}
-
-function addToWatchlist() {
-    const detailsTitle = document.getElementById('detailsTitle').textContent;
-    
-    alert(`Added "${detailsTitle}" to your watchlist!`);
-}
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('movieDetails').style.display = 'none';
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const movieList = document.querySelector('.movie-list');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-
-    let currentIndex = 0;
-    const totalItems = movieList.children.length;
-
-    nextBtn.addEventListener('click', function () {
-        currentIndex = (currentIndex + 1) % totalItems;
-        updateCarousel();
+        if (e.target.classList.contains("video-popup-close")) {
+            toggleVideoPopup();
+        }
     });
 
-    prevBtn.addEventListener('click', function () {
-        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-        updateCarousel();
-    });
+    function toggleVideoPopup() {
+        const videoPopup = document.querySelector(".video-popup");
+        videoPopup.classList.toggle("openpopup");
 
-    function updateCarousel() {
-        movieList.style.transform = `translateX(-${currentIndex * (33.33 + 20)}%)`;
+        // Aggiungi l'event listener solo quando la popup è aperta
+        if (videoPopup.classList.contains("openpopup")) {
+            document.querySelector(".video-popup-close").addEventListener("click", toggleVideoPopup);
+        } else {
+            // Rimuovi l'event listener quando la popup è chiusa
+            document.querySelector(".video-popup-close").removeEventListener("click", toggleVideoPopup);
+        }
+    }
+
+    function videoItemDetails(videoItem) {
+        document.querySelector(".details-title").textContent = videoItem.querySelector(".episode-title").textContent;
+        document.querySelector(".details-description").textContent = videoItem.querySelector(".epdescription").textContent;
     }
 });
 
+
+function toggleVideoPopup() {
+    const videoPopup = document.querySelector(".video-popup");
+    videoPopup.classList.toggle("openpopup");
+
+    if (videoPopup.classList.contains("openpopup")) {
+        document.querySelector(".pp-thumbnail").play();
+        document.querySelector(".video-popup-close").addEventListener("click", toggleVideoPopup);
+    } else {
+        document.querySelector(".pp-thumbnail").pause();
+        document.querySelector(".video-popup-close").removeEventListener("click", toggleVideoPopup);
+    }
+}
+
+/* section */
+
+const nav = document.querySelector(".list"),
+            navList = nav.querySelectorAll("li"),
+            totalNavList = navList.length,
+            allSection = document.querySelectorAll(".section"),
+            totalSection = allSection.length
+
+for(let i = 0; i<totalNavList; i++ ) {
+    const a = navList[i].querySelector("a");
+    a.addEventListener("click", function() {
+        removeBackSection();
+        for(let j = 0; j<totalNavList; j++) {
+            if(navList[j].querySelector("a").classList.contains("active")) {
+                addBackSection(j);
+            }
+            navList[j].querySelector("a").classList.remove("active");
+        }
+        this.classList.add("active");
+        showSection(this);
+        /* if(window.innerWidth<1200) {
+            asideSectionTogglerBtn();
+        } */
+    });
+}
+
+function removeBackSection() {
+  for(let i = 0; i<totalSection; i++) {
+    allSection[i].classList.remove("back-section");
+  }
+}
+
+function addBackSection(num) {
+  allSection[num].classList.add("back-section");
+}
+
+function showSection(element) {
+  for(let i = 0; i<totalSection; i++) {
+      allSection[i].classList.remove("active");
+  }
+  const target = element.getAttribute("href").split("#")[1];
+  document.querySelector("#" + target).classList.add("active");
+}
+
+function updateNav(element) {
+  for(let i = 0; i<totalNavList; i++)
+  {
+      navList[i].querySelector("a").classList.remove("active");
+      const target = element.getAttribute("href").split("#")[1];
+      if(target === navList[i].querySelector("a").getAttribute("href").split("#")[1]) {
+          navList[i].querySelector("a").classList.add("active");
+      }
+  }
+}
+
+/* read more */
+const readMoreButton = document.querySelector(".read-more"),
+            readMoreContent = document.querySelector(".not-visible");
+
+readMoreButton.addEventListener("click", () => {
+    readMoreContent.classList.toggle('visible');
+    readMoreButton.innerHTML = "Leggi di meno";
+});
+
+/* modale */
 document.addEventListener('DOMContentLoaded', function () {
     var modal = document.getElementById("myModal");
     var modalText = document.getElementById("modal-text");
@@ -128,6 +154,3 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-  
-
-
